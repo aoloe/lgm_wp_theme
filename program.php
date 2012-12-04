@@ -40,7 +40,7 @@ $(document).ready(function(){
     });
     $(".program_slot").live("click", function(){
         alert('chuila');
-        $("#program_slot_detail").load("/2012/wp/wp-content/themes/lgm/program_description.php")
+        $("#program_slot_detail").load("/2013/wp/wp-content/themes/lgm/program_description.php")
 
     });
 
@@ -204,7 +204,7 @@ foreach ($schedule as $key => $value) {
                 $item['title'].
                 (
                     current_user_can('edit_posts') ?
-                    ' <sup>[<a href="/2012/wp/wp-admin/admin.php?page=gf_entries&view=entry&id=3&lid='.$item['id'].'&s=sikk&paged=1&screen_mode=edit">e</a>]</sup>' :
+                    ' <sup>[<a href="/2013/wp/wp-admin/admin.php?page=gf_entries&view=entry&id=3&lid='.$item['id'].'&s=sikk&paged=1&screen_mode=edit">e</a>]</sup>' :
                     ''
                 ).
                 '<br />'.
@@ -230,7 +230,7 @@ foreach ($schedule as $key => $value) {
             "<strong>".$item['title']."</strong>".
             (
                 current_user_can('edit_posts') ?
-                ' <sup>[<a href="/2012/wp/wp-admin/admin.php?page=gf_entries&view=entry&id=3&lid='.$item['id'].'&s=sikk&paged=1&screen_mode=edit">e</a>]</sup>' :
+                ' <sup>[<a href="/2013/wp/wp-admin/admin.php?page=gf_entries&view=entry&id=3&lid='.$item['id'].'&s=sikk&paged=1&screen_mode=edit">e</a>]</sup>' :
                 ''
             ).
             '<br />'.
@@ -273,7 +273,7 @@ if (current_user_can('edit_posts')) {
     $i = 0;
     $table = '<table style="border:1px solid black;"><tr>';
     foreach ($unscheduled as $item) {
-        $table .= '<td style="border:1px solid black;">'.$item['title'].'<sup><a href="/2012/wp/wp-admin/admin.php?page=gf_entries&view=entry&id=3&lid='.$item['id'].'&s=sikk&paged=1&screen_mode=edit">&gt;e</a></sup></p>'.'<br>'.$item['talker'].'<br><span style="font-size:6pt;">'.$item['type'].'</span>'.'</td>';
+        $table .= '<td style="border:1px solid black;">'.$item['title'].'<sup><a href="/2013/wp/wp-admin/admin.php?page=gf_entries&view=entry&id=3&lid='.$item['id'].'&s=sikk&paged=1&screen_mode=edit">&gt;e</a></sup></p>'.'<br>'.$item['talker'].'<br><span style="font-size:6pt;">'.$item['type'].'</span>'.'</td>';
         if ($i > 0 && $i % 5 == 0) {
             $table .= '</tr><tr>';
             $i = 0;

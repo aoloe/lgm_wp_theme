@@ -34,7 +34,7 @@
                     <h3>Team</h3>
                     <ul>
                     <?php
-                    $rows = $wpdb->get_results( "SELECT ID, post_title FROM wp2012_posts WHERE post_type = 'page' /* AND post_status = 'private' */ AND post_parent=36" );
+                    $rows = $wpdb->get_results( "SELECT ID, post_title FROM wp2013_posts WHERE post_type = 'page' /* AND post_status = 'private' */ AND post_parent=36" );
                     // debug('myrows', $myrows);
                     foreach ($rows as $item) : ?>
                     <li style="margin-bottom:6px;"><a href="<?php echo(get_bloginfo('url').'?page_id='.$item->ID); ?>"><?php echo($item->post_title); ?></a></li>
@@ -60,6 +60,7 @@
 */ ?>
 					 
 				</div><!-- logos --> 
+<?php /*
 <div id="social">
 <h3>Follow Us</h3>
 <?php wp_list_bookmarks( array('category_name'=> 'Social',
@@ -84,6 +85,7 @@
                                'orderby'      => 'rand'
                                 ) ); ?>
 </div>
+*/ ?>
 
 
 			</div><!-- center-content --> 

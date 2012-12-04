@@ -19,8 +19,8 @@ PRODID:-//Libre Graphics Meeting//EN
 VERSION:2.0
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:LGM 2012
-X-WR-TIMEZONE:Europe/Vienna
+X-WR-CALNAME:LGM 2013
+X-WR-TIMEZONE:Europe/Madrid
 X-WR-CALDESC:
 <?php
 function time_add($time, $minutes) {
@@ -41,8 +41,8 @@ foreach ($entry as $key => $value) {
         // debug('value', $value);
 ?>
 BEGIN:VEVENT
-DTSTART:2012050<?php echo($value['day']) ?>T<?php echo(str_replace(':', '', $value['time'])) ?>00Z
-DTEND:2012050<?php echo($value['day']) ?>T<?php echo(str_replace(':', '', time_add($value['time'], $value['duration']))) ?>00Z
+DTSTART:2013041<?php echo($value['day']) ?>T<?php echo(str_replace(':', '', $value['time'])) ?>00Z
+DTEND:2013041<?php echo($value['day']) ?>T<?php echo(str_replace(':', '', time_add($value['time'], $value['duration']))) ?>00Z
 DTSTAMP:<?php echo(date('Ymd\THis')); ?>Z
 UID:talkid<?php echo(sprintf('%06d', $key)); ?>@libregraphicsmeeting.org
 CREATED:<?php echo(date('Ymd\THis')); ?>Z
