@@ -3,24 +3,26 @@
 <head>
 	<title>Libre graphics meeting, April 10-13 2013, Madrid</title>
 	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-	<link rel="stylesheet" href="<? bloginfo('template_url') ?>/style.css" type="text/css"/>
-        <meta name="Author" content="<?php bloginfo('name'); ?>" />
-        <meta name="robots" content="index, follow" />
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="<?php bloginfo('template_url') ?>/css/reset.css" type="text/css"/>
+	<link rel="stylesheet" href="<?php bloginfo('template_url') ?>/css/fonts.css" type="text/css"/>
+	<link rel="stylesheet" href="<?php bloginfo('template_url') ?>/style.css" type="text/css"/>
+
+    <meta name="Author" content="<?php bloginfo('name'); ?>" />
+    <meta name="robots" content="index, follow" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
  
 
 <?php wp_head(); ?>
 <script>
-var TEMPLATE_PATH = '<? bloginfo('template_url') ?>';
+var TEMPLATE_PATH = '<?php bloginfo('template_url') ?>';
 </script>
-<script type="text/javascript" src="<? bloginfo('template_url') ?>/js/lgm.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/lgm.js"></script>
 </head>
 <body>
 
-<div id="container" class="action-view">
 
-    <div id="bla">
     <div id="page">
 
 	<div id="header-container">
@@ -29,20 +31,18 @@ var TEMPLATE_PATH = '<? bloginfo('template_url') ?>';
 			<div id="logo" style="height:305px;">
 				<div class="column" style="float: left; width: 50%;">
                 <div style="position:absolute; right:0px; top:-25px;"><?php do_action('icl_language_selector'); ?></div>
-					<?
+					<?php
 					$lang = isset($_GET['lang']) ? $_GET['lang'] : false;
 					$backtohome = $lang=='fr' ? 'accueil' : 'Back to home';
 					?>
-					<a href="/2013/<? if($lang) echo '?lang='.$lang; ?>" title="<?= $backtohome ?>"><img src="<? bloginfo('template_url') ?>/img/LGM<? if($lang) echo '_de'; ?>.png" /></a>
+					<a href="/2013/<?php if($lang) echo '?lang='.$lang; ?>" title="<?= $backtohome ?>"><img src="<?php bloginfo('template_url') ?>/img/LGM<?php if($lang) echo '_de'; ?>.png" /></a>
 				</div>
-				<div class="column" style="float: right; width: 33.333%; height:100px;"> 
-                    <?php /*
-                    <a id="propose" class="image-link" href="http://libregraphicsmeeting.org/2013/submit-a-talk"><img alt="propose your talk!" src="<? bloginfo('template_url') ?>/img/propose_.png" border="0" /></a>
-					<a id="join" class="image-link" href="http://libregraphicsmeeting.org/2013/registration/"><img alt="register!" src="<? bloginfo('template_url') ?>/img/register_rotated.png" border="0" /></a>
-					<a id="join" class="image-link" href="http://libregraphicsmeeting.org/2013/registration/"><img alt="register!" src="<? bloginfo('template_url') ?>/img/register_rotated<? if($lang) echo '_fr'; ?>.png" border="0" /></a>
-					<a id="donate" class="image-link" href="http://pledgie.com/campaigns/14610"><img alt="donate!" src="/2013/pledgie_button/" border="0" /></a>
-					<a id="donate" class="image-link" href="http://pledgie.com/campaigns/16614"><img alt="review!" src="/2013/pledgie_button/" border="0" /></a>
-                    */ ?>
+
+				<div class="column" style="float: left; width: 33.333%; height:100px;"> 
+                    <a id="propose" class="image-link" href="http://libregraphicsmeeting.org/2013/submit-a-talk"><img alt="propose your talk!" src="<?php bloginfo('template_url') ?>/img/badges/yourtalk.png" border="0" /></a>
+					<a id="join" class="image-link" href="http://libregraphicsmeeting.org/2013/registration/"><img alt="register!" src="<?php bloginfo('template_url') ?>/img/badges/signup.png" border="0" /></a>
+                    <a id="futuretools" class="image-link" href="/2013/?page_id=84"><img alt="Future tools" src="<?php bloginfo('template_url') ?>/img/badges/futuretools.png" border="0" /></a>
+                    <a id="support" class="image-link" href="#"><img alt="Support LGM" src="<?php bloginfo('template_url') ?>/img/badges/support.png" border="0" /></a>
                     <?php /* static button
 					<!-- <a id="donate" class="image-link" href="http://pledgie.com/campaigns/14610"><img alt="review!" src="<? bloginfo('template_url') ?>/img/pledgie_banner<? if($lang) echo '_fr'; ?>.png" border="0" /></a> -->
                     */ ?>
