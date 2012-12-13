@@ -16,8 +16,7 @@ if (!function_exists('debug')) {
 
 function css_allmend_vscript() {
     $css = "
-        .grid-item {width:200px; padding:15px 15px 30px 15px; margin-bottom:5px;}
-        #grid-wrapper .post-title {clear:none; font-size:24px; color:#cc0000;}
+        .grid-item {width:200px; padding:15px 15px 30px 0px; margin-bottom:5px;}
         #grid-wrapper .post-title a {color:#cc0000;}
         #grid-wrapper .post-content {margin-bottom:0px; padding-bottom:0px; font-size:0.9em;}
         #grid-wrapper .post-theme {font-size:0.8em;}
@@ -34,7 +33,7 @@ function css_allmend_vscript() {
             ";
             */
         }
-    echo('<style type="text/css">'.$css.'</style>'."\n");
+    //echo('<style type="text/css">'.$css.'</style>'."\n");
 }
 add_image_size('allmend-mosaic-thumbnail', 200, 200);
 ?>
@@ -67,12 +66,12 @@ $mosaic_posts_per_page = 4;
 <script>
         var $j = jQuery.noConflict();
         $j(function(){
-            $j("#grid-wrapper").vgrid();
+            //$j("#grid-wrapper").vgrid();
         }
         );
 </script>
 
-<div id="content" role="main" style="width:500px;">
+<div id="content" role="main">
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 <?php the_content(); ?>
@@ -144,11 +143,11 @@ $mosaic_posts_per_page = 4;
                 implode(', ', $categories)
             ));
         }
-        echo(sprintf(
-            "<p class=\"post-meta\">%s by %s.</p>",
-            get_the_time(get_option('date_format')),
-            get_the_author()
-        ));
+        //echo(sprintf(
+            //"<p class=\"post-meta\">%s by %s.</p>",
+            //get_the_time(get_option('date_format')),
+            //get_the_author()
+        //));
         ?>
         </div> <?php // .grid-item ?>
         <?php
