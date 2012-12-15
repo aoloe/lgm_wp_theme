@@ -3,8 +3,9 @@
  * Template Name: LGM people
  * Description: A Page Template that shows a list of all people at the lgm
  */
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+// error_reporting(E_ALL);
+error_reporting(0);
+ini_set('display_errors', false);
 
 
 include('Talk.php');
@@ -17,7 +18,6 @@ $talk = new lgm_Talk();
 
 
 <?php get_header(); ?>
-<?php get_sidebar(); ?>
 
 <div id="content" role="main" style="width:500px;">
 
@@ -57,6 +57,8 @@ foreach ($email as $item) {
 }
 
 ?>
+
+<?php get_sidebar(); ?>
 
 </div> <?php // #content ?>
 

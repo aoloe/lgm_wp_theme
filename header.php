@@ -33,7 +33,7 @@ var TEMPLATE_PATH = '<? bloginfo('template_url') ?>';
 					$lang = isset($_GET['lang']) ? $_GET['lang'] : false;
 					$backtohome = $lang=='fr' ? 'accueil' : 'Back to home';
 					?>
-					<a href="/2013/<? if($lang) echo '?lang='.$lang; ?>" title="<?= $backtohome ?>"><img src="<? bloginfo('template_url') ?>/img/LGM<? if($lang) echo '_de'; ?>.png" /></a>
+					<a href="/2013/<? if($lang) echo '?lang='.$lang; ?>" title="<?= $backtohome ?>"><img src="<? bloginfo('template_url') ?>/img/LGM<? if($lang) echo '_es'; ?>.png" /></a>
 				</div>
 				<div class="column" style="float: right; width: 33.333%; height:100px;"> 
                     <?php /*

@@ -61,7 +61,7 @@ foreach ($row as $item) {
 */
 
 /** read the entries */
-$row = $wpdb->get_results( "SELECT * FROM ".$wpdb->prefix."rg_lead_detail WHERE form_id = 1 AND field_number IN (19, 20, 4, 31, 5, 22, 26) ORDER BY lead_id", ARRAY_A  );
+$row = $wpdb->get_results( "SELECT * FROM ".$wpdb->prefix."rg_lead_detail WHERE form_id = 1 AND field_number IN (19, 20, 4, 31, 5, 22, 26) ORDER BY lead_id DESC", ARRAY_A  );
 // debug('row', $row);
 $entry = array();
 foreach ($row as $item) {
