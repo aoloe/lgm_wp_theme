@@ -19,9 +19,6 @@ var TEMPLATE_PATH = '<? bloginfo('template_url') ?>';
 </head>
 <body>
 
-<div id="container" class="action-view">
-
-    <div id="bla">
     <div id="page">
 
 	<div id="header-container">
