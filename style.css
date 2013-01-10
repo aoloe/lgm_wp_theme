@@ -10,7 +10,6 @@ Author URL: http://stresslimitdesign.com
 
 		Table of Contents:
  
-		Reset
 		General Styles
 			typography
 			links
@@ -23,86 +22,39 @@ Author URL: http://stresslimitdesign.com
 		Layout
 		Section Styles
 
+        Depends on Eric Meyer's reset.css
+        http://meyerweb.com/eric/tools/css/reset/reset.css
+
 	+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-
-
-
-
-
-
-/*  --------------------------------------------------------------
-	RESET
-	-------------------------------------------------------------*/
-
-html, body, div, span, a, img,
-h1, h2, h3, h4, h5, h6, hgroup, p,
-dl, dialog, dt, dd, ol, ul, li, 
-abbr, acronym, address, b, big, blockquote, 
-cite, code, del, dfn, em, i, ins, kbd, /* pre, */ q, 
-samp, tt, var, small, strong, sub, sup, 
-object, iframe, form, fieldset, label, legend, 
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, footer, header, nav, section,
-figure, menu, time, mark, audio, video					{ font-family: inherit; font-size: 100%; font-weight: inherit; font-style: inherit; vertical-align: baseline; white-space: normal; text-align: left; margin: 0; padding: 0; border: 0; outline: 0; background: transparent; }
-textarea, input, select									{ font-family: inherit; font-size: 100%; font-weight: normal; font-style: normal; white-space: normal; text-align: left; margin: 0; padding: 0; }
-article, aside, footer, header, nav, section,
-dialog, figure, hgroup, menu							{ display: block; }
-
-del, ins												{ text-decoration: none; }
-blockquote:before, blockquote:after, q:before, q:after	{ content:''; content:none; }
-ol, ul													{ list-style: none; }
-table													{ border-collapse: separate; border-spacing: 0; background-color: transparent; width: auto; height: auto; }
-:focus													{ outline: 0; }
-
-
-
-html { height:100%; width:100%; }
-body { height:100%; width:100%; font:13px "Lucida Grande",Verdana,sans-serif; color:navy; line-height:16px; }
-
-
 
 /*  --------------------------------------------------------------
 	GENERAL STYLES
 	-------------------------------------------------------------*/
 
 /* typography */
+body {
+    font-size: 14px;
+    line-height: 18px; 
+    font-family: "News Cycle", sans-serif;
+    color: navy;
+}
 p { margin:0 0 0.8em 0; }
 strong, b { font-weight:bold; }
 em, i { font-style:italic; }
 blockquote, q { quotes:none; font-size:14px; line-height:18px; }
 sup {font-size: 0.692em; vertical-align: 0.5em; line-height: 0; }
 
-h1,h2,h3,h4,h5 { font-weight:normal; margin:0 0 0.3em 0; padding:0.3em 0 0 0; border-bottom:1px solid #8CACBB; }
-h1 { font-size:28px; line-height:36px; padding-bottom:8px; }
-h2 { font-size:20px; line-height:20px; padding-bottom:10px; }
-h3 { font-size:18px; line-height:22px; padding-bottom:18px; }
-h4 { font-size:14px; line-height:18px; padding-bottom:5px; text-transform:uppercase; }
-h5 { font-size:14px; line-height:20px; padding-bottom:5px; color:#fff; }
-h6 { font-size:11px; line-height:14px; padding-bottom:2px; }
-
-
-h1 { font-size:1.6em; font-weight:bold; }
-h2 { font-size:1.5em; margin-left:1em; margin-top:2.2em; }
-h3 { font-size:1.4em; margin-left:2em; margin-top:1.7em; }
-h4 { font-size:1.2em; margin-left:4em; margin-top:1.3em; }
-
-
-h2 span { font-size: 0.769em; vertical-align: top; }
-h1 { font-size: 1.8em; }
-h2, h3 { font-size: 1em; line-height: 1.308em; }
-h4 { margin-top: 1.308em; }
+h1, h2, h3 {
+    font-weight: bold;
+}
 
 .alignleft { float:left; }
 .alignright { float:right; }
 
-
-
-
-
 /* links */
-a			{ text-decoration: none; color: #cc0000; border-bottom: 1px dotted #cc0000; }
-a:hover 	{ border-style: solid; color: #cc0000 !important; }
+a { text-decoration: none; color: #cc0000; }
+a:hover { color: #cc0000 !important; text-decoration: underline; }
 a:active	{ outline:none; }
 a			{ -webkit-transition:all 0.2s ease-in-out; -moz-transition:all 0.2s ease-in-out; -o-transition:all 0.2s ease-in-out; }
 a.none, h1 a, h2 a { border-bottom:none; }
@@ -165,6 +117,7 @@ hr { border:none !important; margin:6px 0; background:#eee; height:1px; }
 	LAYOUT
 	-------------------------------------------------------------*/
 
+html, body { height:100%; width:100%; }
 div#content .untranslated { background-color:#F5E1CD; }
 
 a.rss { background:url('img/rss.gif') no-repeat left; padding:0.2em 0.2em 0.2em 18px; color:orange; font-weight:bold; text-decoration:underline; }
@@ -176,22 +129,20 @@ iframe#background { width:100%; height:100%; position:fixed; top:0; left:0;
 	opacity:0.4;
 	filter: alpha(opacity=40);
 }
-/*#bla { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: auto; margin: 0; padding: 0; }*/
 
 #container_lgm { clear: both; padding-top: 2.616em; }
 
 #page { width:978px; margin:32px auto; position:relative; z-index:2; }
 #header { margin-bottom: 2.616em; }
-#left { float: left; width: 50%;  color: navy; }
-/* #right { float: right; width: 33.333%; } */
-#right { float: right; width: 30%; }
+#content { float: left; width: 50%;  color: navy; }
+#right { float: right; width: 33.333%; }
 #center { float: right; width: 16.666%; }
 /* #center { float: right; width: 15%; } */
 
 #left-content, #center-content, #right-content { margin: 0 1.5em; }
 
 /* footer */
-div.footer { padding-top: 8px; }
+div.footer { padding-top: 8px; font-size: smaller; }
 div#footer-container { clear:both; }
 div#footer-container div.footer { text-align:center; }
 div#debug { border:1px solid black; margin-top:3em; padding:0.3em; clear:both; font-size:0.7em; background-color:#F8F8F8; }
@@ -522,29 +473,18 @@ a.anwsettings {
 
 /* Aditional */
 
+.post-edit-link {
+    font-size: 0.5em;
+    font-size: normal;
+}
+
 #flickr a { color: navy; }
 
-/* div#content h1, div#content h2, div#content h3, div#content h4, div#content h5 */
-h1, h2, h3, h4, h5 {
-    margin-left:0;
-    /* margin-top:0; */
-    margin-top:16px;
-    margin-bottom:8px;
-    border-bottom-style: none;
-    font-weight:bold;
-    margin:0;
-    padding:0;
-}
 div#content h1:first-child {
     margin-bottom: 0;
     background-color: none;
 }
 
-div#content h1,
-div#content h2 {
-    margin-top: 16px;
-    margin-bottom: 8px;
-}
 div#content h1 {
     color: #CC0000;
 }
@@ -595,10 +535,19 @@ a.anwsettings {
 
 /* badges */
 
+a#support,
 a#propose,
 a#donate,
 a#donate2,
+a#futuretools,
 a#join { display: block; position: relative; }
+
+a#support:hover,
+a#propose:hover,
+a#donate:hover,
+a#donate2:hover,
+a#futuretools:hover,
+a#join:hover { z-index: 9999999}
 
 /* use this when removing the "propose talk"
 a#propose { left: 150px; width: 147px; height: 147px; }
@@ -606,9 +555,11 @@ a#donate { left: -10px; top: -85px; z-index: 3; width: 139px; height: 139px; }
 a#join { top: -140px; left: 90px; width: 123px; height: 123px; }
 */
 
-a#propose { left: 150px; width: 147px; height: 147px; }
+a#support { top: -430px; left: 10px; width: 147px; height: 147px; }
+a#propose { left: 220px; width: 147px; height: 147px; }
 a#donate { left: -10px; top: -105px; z-index: 3; width: 139px; height: 139px; }
-a#join { top: -120px; left: 20px; width: 123px; height: 123px; }
+a#join { top: -120px; left: 139px; width: 123px; height: 123px; }
+a#futuretools{ top: -187px; left: 99px; width: 123px; height: 123px; }
 
 a#donate2 {
 	top: -80px;
@@ -627,3 +578,14 @@ a#donate2:hover, a#donate2:focus, a#donate2:active {
 .page-item-14 {display:none}
 .page-item-182 {display:none}
 .page-item-424 {display:none}
+
+/* two colums */
+#grid-wrapper {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+}
+
+.grid-item {
+    display: inline-block;
+}

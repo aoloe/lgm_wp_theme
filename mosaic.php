@@ -34,7 +34,7 @@ function css_allmend_vscript() {
             ";
             */
         }
-    echo('<style type="text/css">'.$css.'</style>'."\n");
+    //echo('<style type="text/css">'.$css.'</style>'."\n");
 }
 add_image_size('allmend-mosaic-thumbnail', 200, 200);
 ?>
@@ -67,12 +67,12 @@ $mosaic_posts_per_page = 4;
 <script>
         var $j = jQuery.noConflict();
         $j(function(){
-            $j("#grid-wrapper").vgrid();
+            //$j("#grid-wrapper").vgrid();
         }
         );
 </script>
 
-<div id="content" role="main" style="width:500px;">
+<div id="content" role="main">
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 <?php the_content(); ?>
@@ -144,11 +144,11 @@ $mosaic_posts_per_page = 4;
                 implode(', ', $categories)
             ));
         }
-        echo(sprintf(
-            "<p class=\"post-meta\">%s by %s.</p>",
-            get_the_time(get_option('date_format')),
-            get_the_author()
-        ));
+        //echo(sprintf(
+            //"<p class=\"post-meta\">%s by %s.</p>",
+            //get_the_time(get_option('date_format')),
+            //get_the_author()
+        //));
         ?>
         </div> <?php // .grid-item ?>
         <?php

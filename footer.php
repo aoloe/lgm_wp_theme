@@ -17,8 +17,6 @@
 
 			</div><!-- end footer-container -->
 		</div><!-- end page --> 
-	</div><!-- end bla --> 
-</div><!-- end container --> 
 
 
 </body> 

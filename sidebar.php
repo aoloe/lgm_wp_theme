@@ -4,14 +4,13 @@
 
 				<? include_once('inc/flickr_feed.php') ?>
 				<div id="flickr" class="menu-block">
-				<h3 style="margin-left:0px;"><a href="http://www.flickr.com/groups/776360@N22/pool/">Flickr pool</a></h3>
 				<?= $flickr_html ?>
 				</div> <!-- div#flickr -->
 
 
 				<? include_once('inc/identica_feed.php') ?>
 				<dl id="twits" class="menu-block">
-				<h3>Identi.ca feed</h3>
+				<h3>Identi.ca feed for !LGM</h3>
 				<?= $identica_html ?>
 				</dl>
 
