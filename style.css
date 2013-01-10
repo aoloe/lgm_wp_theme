@@ -599,10 +599,19 @@ a.anwsettings {
 
 /* badges */
 
+a#support,
 a#propose,
 a#donate,
 a#donate2,
+a#futuretools,
 a#join { display: block; position: relative; }
+
+a#support:hover,
+a#propose:hover,
+a#donate:hover,
+a#donate2:hover,
+a#futuretools:hover,
+a#join:hover { z-index: 9999999}
 
 /* use this when removing the "propose talk"
 a#propose { left: 150px; width: 147px; height: 147px; }
@@ -610,9 +619,11 @@ a#donate { left: -10px; top: -85px; z-index: 3; width: 139px; height: 139px; }
 a#join { top: -140px; left: 90px; width: 123px; height: 123px; }
 */
 
-a#propose { left: 150px; width: 147px; height: 147px; }
+a#support { top: -430px; left: 10px; width: 147px; height: 147px; }
+a#propose { left: 220px; width: 147px; height: 147px; }
 a#donate { left: -10px; top: -105px; z-index: 3; width: 139px; height: 139px; }
-a#join { top: -120px; left: 20px; width: 123px; height: 123px; }
+a#join { top: -120px; left: 139px; width: 123px; height: 123px; }
+a#futuretools{ top: -187px; left: 99px; width: 123px; height: 123px; }
 
 a#donate2 {
 	top: -80px;
