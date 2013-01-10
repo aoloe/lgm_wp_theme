@@ -481,27 +481,11 @@ a.anwsettings {
 
 #flickr a { color: navy; }
 
-/* div#content h1, div#content h2, div#content h3, div#content h4, div#content h5 */
-h1, h2, h3, h4, h5 {
-    margin-left:0;
-    /* margin-top:0; */
-    margin-top:16px;
-    margin-bottom:8px;
-    border-bottom-style: none;
-    font-weight:bold;
-    margin:0;
-    padding:0;
-}
 div#content h1:first-child {
     margin-bottom: 0;
     background-color: none;
 }
 
-div#content h1,
-div#content h2 {
-    margin-top: 16px;
-    margin-bottom: 8px;
-}
 div#content h1 {
     color: #CC0000;
 }
