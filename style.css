@@ -52,13 +52,9 @@ h1, h2, h3 {
 .alignleft { float:left; }
 .alignright { float:right; }
 
-
-
-
-
 /* links */
-a			{ text-decoration: none; color: #cc0000; border-bottom: 1px dotted #cc0000; }
-a:hover 	{ border-style: solid; color: #cc0000 !important; }
+a { text-decoration: none; color: #cc0000; }
+a:hover { color: #cc0000 !important; text-decoration: underline; }
 a:active	{ outline:none; }
 a			{ -webkit-transition:all 0.2s ease-in-out; -moz-transition:all 0.2s ease-in-out; -o-transition:all 0.2s ease-in-out; }
 a.none, h1 a, h2 a { border-bottom:none; }
