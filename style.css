@@ -57,8 +57,7 @@ table													{ border-collapse: separate; border-spacing: 0; background-col
 
 
 
-html { height:100%; width:100%; }
-body { height:100%; width:100%; font:13px "Lucida Grande",Verdana,sans-serif; color:navy; line-height:16px; }
+html, body { height:100%; width:100%; }
 
 
 
@@ -67,6 +66,12 @@ body { height:100%; width:100%; font:13px "Lucida Grande",Verdana,sans-serif; co
 	-------------------------------------------------------------*/
 
 /* typography */
+body {
+    font-size: 14px;
+    line-height: 18px; 
+    font-family: "News Cycle", sans-serif;
+    color: navy;
+}
 p { margin:0 0 0.8em 0; }
 strong, b { font-weight:bold; }
 em, i { font-style:italic; }
