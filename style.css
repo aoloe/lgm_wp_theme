@@ -10,7 +10,6 @@ Author URL: http://stresslimitdesign.com
 
 		Table of Contents:
  
-		Reset
 		General Styles
 			typography
 			links
@@ -23,43 +22,11 @@ Author URL: http://stresslimitdesign.com
 		Layout
 		Section Styles
 
+        Depends on Eric Meyer's reset.css
+        http://meyerweb.com/eric/tools/css/reset/reset.css
+
 	+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-
-
-
-
-
-
-/*  --------------------------------------------------------------
-	RESET
-	-------------------------------------------------------------*/
-
-html, body, div, span, a, img,
-h1, h2, h3, h4, h5, h6, hgroup, p,
-dl, dialog, dt, dd, ol, ul, li, 
-abbr, acronym, address, b, big, blockquote, 
-cite, code, del, dfn, em, i, ins, kbd, /* pre, */ q, 
-samp, tt, var, small, strong, sub, sup, 
-object, iframe, form, fieldset, label, legend, 
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, footer, header, nav, section,
-figure, menu, time, mark, audio, video					{ font-family: inherit; font-size: 100%; font-weight: inherit; font-style: inherit; vertical-align: baseline; white-space: normal; text-align: left; margin: 0; padding: 0; border: 0; outline: 0; background: transparent; }
-textarea, input, select									{ font-family: inherit; font-size: 100%; font-weight: normal; font-style: normal; white-space: normal; text-align: left; margin: 0; padding: 0; }
-article, aside, footer, header, nav, section,
-dialog, figure, hgroup, menu							{ display: block; }
-
-del, ins												{ text-decoration: none; }
-blockquote:before, blockquote:after, q:before, q:after	{ content:''; content:none; }
-ol, ul													{ list-style: none; }
-table													{ border-collapse: separate; border-spacing: 0; background-color: transparent; width: auto; height: auto; }
-:focus													{ outline: 0; }
-
-
-
-html, body { height:100%; width:100%; }
-
-
 
 /*  --------------------------------------------------------------
 	GENERAL STYLES
@@ -170,6 +137,7 @@ hr { border:none !important; margin:6px 0; background:#eee; height:1px; }
 	LAYOUT
 	-------------------------------------------------------------*/
 
+html, body { height:100%; width:100%; }
 div#content .untranslated { background-color:#F5E1CD; }
 
 a.rss { background:url('img/rss.gif') no-repeat left; padding:0.2em 0.2em 0.2em 18px; color:orange; font-weight:bold; text-decoration:underline; }

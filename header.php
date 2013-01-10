@@ -3,6 +3,7 @@
 <head>
 	<title>Libre graphics meeting, April 10-13 2013, Madrid</title>
 	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<link rel="stylesheet" href="<? bloginfo('template_url') ?>/css/reset.css" type="text/css"/>
 	<link rel="stylesheet" href="<? bloginfo('template_url') ?>/css/fonts.css" type="text/css"/>
 	<link rel="stylesheet" href="<? bloginfo('template_url') ?>/style.css" type="text/css"/>
         <meta name="Author" content="<?php bloginfo('name'); ?>" />
