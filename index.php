@@ -19,9 +19,8 @@ get_header()
 -->
 
 					<div class="viewcontent cc-page <?php if ( is_sticky() ) echo "sticky"; ?>" id="post-<?php the_ID(); ?>">
-                    <p><?php edit_post_link(__('[Edit]'), '<p>', '</p>'); ?>
 
-						<h1><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
+						<h1><a href="<?php the_permalink() ?>"><?php the_title(); ?></a><?php edit_post_link(__('✎'), '<span>', '</span>'); ?></h1>
 
 						<?php the_content(); ?>
 
