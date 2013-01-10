@@ -30,17 +30,6 @@ get_header()
                     <?php comments_template(); ?>
                     </div>
 
-					<div id="pageinfo">
-<?/*						<div id="pagetranslations">
-							<ul>
-								<li class="current" style="background-image:url('<? bloginfo('template_url')?>/img/flags/en.png');">en</li>
-								<li><a href="/2011/index.php?p=fr%2Fhome" style="background-image:url('<? bloginfo('template_url')?>/img/flags/fr.png');">fr</a></li>
-							</ul>
-						</div>
-*/ ?>						<div id="pagerevision">Last edited on <?php the_modified_date(); ?><?php edit_post_link(__('[Edit]'), ''); ?></div>
-						<div class="break"></div>
-					</div>
-
 <?php endwhile; endif; ?>
 
 <div class="navigation">
