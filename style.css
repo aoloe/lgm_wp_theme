@@ -45,25 +45,9 @@ em, i { font-style:italic; }
 blockquote, q { quotes:none; font-size:14px; line-height:18px; }
 sup {font-size: 0.692em; vertical-align: 0.5em; line-height: 0; }
 
-h1,h2,h3,h4,h5 { font-weight:normal; margin:0 0 0.3em 0; padding:0.3em 0 0 0; border-bottom:1px solid #8CACBB; }
-h1 { font-size:28px; line-height:36px; padding-bottom:8px; }
-h2 { font-size:20px; line-height:20px; padding-bottom:10px; }
-h3 { font-size:18px; line-height:22px; padding-bottom:18px; }
-h4 { font-size:14px; line-height:18px; padding-bottom:5px; text-transform:uppercase; }
-h5 { font-size:14px; line-height:20px; padding-bottom:5px; color:#fff; }
-h6 { font-size:11px; line-height:14px; padding-bottom:2px; }
-
-
-h1 { font-size:1.6em; font-weight:bold; }
-h2 { font-size:1.5em; margin-left:1em; margin-top:2.2em; }
-h3 { font-size:1.4em; margin-left:2em; margin-top:1.7em; }
-h4 { font-size:1.2em; margin-left:4em; margin-top:1.3em; }
-
-
-h2 span { font-size: 0.769em; vertical-align: top; }
-h1 { font-size: 1.8em; }
-h2, h3 { font-size: 1em; line-height: 1.308em; }
-h4 { margin-top: 1.308em; }
+h1, h2, h3 {
+    font-weight: bold;
+}
 
 .alignleft { float:left; }
 .alignright { float:right; }
