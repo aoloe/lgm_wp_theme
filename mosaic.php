@@ -14,28 +14,6 @@ if (!function_exists('debug')) {
     }
 }
 
-function css_allmend_vscript() {
-    $css = "
-        .grid-item {width:200px; padding:15px 15px 30px 15px; margin-bottom:5px;}
-        #grid-wrapper .post-title {clear:none; font-size:24px; color:#cc0000;}
-        #grid-wrapper .post-title a {color:#cc0000;}
-        #grid-wrapper .post-content {margin-bottom:0px; padding-bottom:0px; font-size:0.9em;}
-        #grid-wrapper .post-theme {font-size:0.8em;}
-        /* #grid-wrapper .post-meta {margin-top:0px; padding:0px 5px; background-color:#ddd;} */
-        #main {padding-left:0px; margin-left:0px;}
-        /* #content {padding:0px; margin:0px;} */
-        #content {padding:0px; margin:0px; width:700px;}
-";
-        if ($_SERVER['REMOTE_ADDR'] == '178.195.77.72') {
-            /*
-            $css .= "
-                #grid-wrapper {background-color:yellow; width:800px;}
-                .grid-item {background-color:red;}
-            ";
-            */
-        }
-    //echo('<style type="text/css">'.$css.'</style>'."\n");
-}
 add_image_size('allmend-mosaic-thumbnail', 200, 200);
 ?>
 
@@ -52,7 +30,6 @@ $mosaic_posts_per_page = 4;
 <?php wp_enqueue_script('jquery'); ?>
 <?php wp_enqueue_script('jquery.easing',get_bloginfo('template_url').'/js/jquery.easing.1.3.js'); ?>
 <?php wp_enqueue_script('jquery.vgrid',get_bloginfo('template_url').'/js/jquery.vgrid.0.1.7.min.js'); ?>
-<?php add_action('wp_print_styles', 'css_allmend_vscript', 12); ?>
 <?php get_header(); ?>
 <?php get_sidebar(); ?>
 
@@ -63,14 +40,6 @@ $mosaic_posts_per_page = 4;
 {border:1px solid black}
 */
 </style>
-
-<script>
-        var $j = jQuery.noConflict();
-        $j(function(){
-            //$j("#grid-wrapper").vgrid();
-        }
-        );
-</script>
 
 <div id="content" role="main">
 
@@ -144,11 +113,6 @@ $mosaic_posts_per_page = 4;
                 implode(', ', $categories)
             ));
         }
-        //echo(sprintf(
-            //"<p class=\"post-meta\">%s by %s.</p>",
-            //get_the_time(get_option('date_format')),
-            //get_the_author()
-        //));
         ?>
         </div> <?php // .grid-item ?>
         <?php
