@@ -38,7 +38,7 @@ var TEMPLATE_PATH = '<? bloginfo('template_url') ?>';
                     <a id="propose" class="image-link" href="http://libregraphicsmeeting.org/2013/call-for-presentations/"><img alt="propose your talk!" src="<?php bloginfo('template_url') ?>/img/badges/yourtalk.png" border="0" /></a>
                     <a id="join" class="image-link" href="http://libregraphicsmeeting.org/2013/registration/"><img alt="register!" src="<?php bloginfo('template_url') ?>/img/badges/signup.png" border="0" /></a>
                     <a id="futuretools" class="image-link" href="http://libregraphicsmeeting.org//2013/about-lgm"><img alt="Future tools" src="<?php bloginfo('template_url') ?>/img/badges/futuretools.png" border="0" /></a>
-                    <a id="support" class="image-link" href="http://libregraphicsmeeting.org/support/"><img alt="Support LGM" src="<?php bloginfo('template_url') ?>/img/badges/support.png" border="0" /></a>
+                    <a id="support" class="image-link" href="http://libregraphicsmeeting.org/2013/support/"><img alt="Support LGM" src="<?php bloginfo('template_url') ?>/img/badges/support.png" border="0" /></a>
                     <?php /* static button
 					<!-- <a id="donate" class="image-link" href="http://pledgie.com/campaigns/14610"><img alt="review!" src="<? bloginfo('template_url') ?>/img/pledgie_banner<? if($lang) echo '_fr'; ?>.png" border="0" /></a> -->
                     */ ?>
