@@ -19,7 +19,7 @@ $talk = new lgm_Talk();
 
 <?php get_header(); ?>
 
-<div id="content" role="main" style="width:500px;">
+<div id="content" role="main">
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 <?php the_content(); ?>
