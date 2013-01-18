@@ -15,7 +15,7 @@ ini_set('display_errors', 1);
 <?php get_header(); ?>
 <?php get_sidebar(); ?>
 
-<div id="content" role="main" style="width:500px;">
+<div id="content" role="main">
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 <?php the_content(); ?>
