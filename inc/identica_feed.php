@@ -15,11 +15,9 @@ foreach ($identica_item as $item) {
     if (!in_array($author, array('fastq', 'usgets', 'ukirane', 'surahmat', 'gosipok', 'sasaras', 'until', 'getsdroid', 'dsodos', 'kaceren', 'colagenperona', 'kumpulbareng', 'jetwinguk', 'lcdfernsehertest', 'plasmafernsehertest', 'matratzenauflageshop', 'torocurvesnowthrower', 'testberichte'))) {
         $i++;
         $identica_html .= "
-            <dd>
             <dt><a href=\"".$item['link']."\">".substr($item['title'], 0, strpos($item['title'], ':'))."</a>
             <span>".$item['date']."</span></dt>
             <dd>".$item['description']."</dd>
-            </dd>
         ";
     }
     if ($i > 5) {
