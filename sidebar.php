@@ -9,8 +9,8 @@
 
 
 				<? include_once('inc/identica_feed.php') ?>
-				<dl id="twits" class="menu-block">
 				<h3>Identi.ca feed for !LGM</h3>
+				<dl id="twits" class="menu-block">
 				<?= $identica_html ?>
 				</dl>
 

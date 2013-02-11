@@ -3,20 +3,13 @@
 get_header()
 ?>
 
-<div id="content-container">
-	<div id="content">
- 
-		<!-- Left Column -->
-		<div id="container_lgm">
-			<div id="left" class="column">
-				<div id="left-content">
 
-
-
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-<!--
-<?php $mypost = get_post_class(); print_r($mypost) ; ?>
--->
+<div id="content">
+<iframe src="/130131_r+w_qa/r+w_qa/make_interface.php" style="width: 250px; height: 325px; overflow: hidden"></iframe>
+    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+    <!--
+    <?php $mypost = get_post_class(); print_r($mypost) ; ?>
+    -->
 
 					<div class="viewcontent cc-page <?php if ( is_sticky() ) echo "sticky"; ?>" id="post-<?php the_ID(); ?>">
 
@@ -37,18 +30,13 @@ get_header()
 	<div class="alignleft"><? previous_posts_link() ?></div>
 </div>
 
-				</div>
-			</div>
 		</div><!-- end container_lgm -->
 
 
 		<?php get_sidebar(); ?>
 
 
-	</div><!-- end content -->
-</div><!-- end content-container -->
-
-
+</div><!-- end content -->
 
 <?php
 get_footer();
