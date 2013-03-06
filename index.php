@@ -5,7 +5,9 @@ get_header()
 
 
 <div id="content">
-<iframe src="/130131_r+w_qa/r+w_qa/make_interface.php" style="width: 250px; height: 325px; overflow: hidden"></iframe>
+<!--
+<if rame src="/2013/r+w/index.php" style="width: 250px; height: 325px; overflow: hidden"></if rame>
+-->
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     <!--
     <?php $mypost = get_post_class(); print_r($mypost) ; ?>

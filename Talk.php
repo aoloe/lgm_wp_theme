@@ -19,7 +19,7 @@ Class lgm_Talk {
     public function get_entry() {
         global $wpdb;
         $result = array();
-        $row = $wpdb->get_results( "SELECT ld.*, ldd.value as lvalue FROM ".$wpdb->prefix."rg_lead_detail AS ld LEFT JOIN ".$wpdb->prefix."rg_lead_detail_long as ldd ON id=lead_detail_id WHERE form_id = 3 AND field_number IN (2, 1, 4, 17, 16, 7, 6, 5, 8, 11, 12, 13, 18, 19, 20, 14, 21) ORDER BY lead_id", ARRAY_A  );
+        $row = $wpdb->get_results( "SELECT ld.*, ldd.value as lvalue FROM ".$wpdb->prefix."rg_lead_detail AS ld LEFT JOIN ".$wpdb->prefix."rg_lead_detail_long as ldd ON id=lead_detail_id WHERE form_id = 3 AND field_number IN (2, 1, 4, 17, 16, 7, 6, 5, 8, 11, 12, 13, 22, 23, 24, 14, 21) ORDER BY lead_id", ARRAY_A  );
         // debug('row', $row);
         foreach ($row as $item) {
             if (!array_key_exists($item['lead_id'], $result)) {
@@ -93,13 +93,13 @@ Class lgm_Talk {
                         $result[$item['lead_id']]['remarks'] = $item['value'];
                     }
                 break;
-                case 18 :
+                case 22 :
                     $result[$item['lead_id']]['day'] = $item['value'];
                 break;
-                case 19 :
+                case 23 :
                     $result[$item['lead_id']]['time'] = $item['value'];
                 break;
-                case 20 :
+                case 24 :
                     $result[$item['lead_id']]['duration'] = $item['value'];
                 break;
                 case 14 :

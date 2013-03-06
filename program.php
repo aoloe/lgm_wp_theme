@@ -82,6 +82,30 @@ $(document).ready(function(){
     [13] => Remarks, questions, scheduling needs, etc.
     [14] => Status of proposal
     [15] => Comments on status
+
+
+
+    [7] => Title of your presentation
+    [18] => Preferred day
+    [22] => Day
+    [23] => Time slot
+    [24] => Duration
+    [2] => First name
+    [1] => Last name
+    [4] => Email
+    [16] => Additional speakers
+    [6] => Summary of your presentation
+    [5] => Short biography
+    [17] => Website
+    [8] => Preferred format
+    [9] => Slides
+    [21] => Slides (PDF)
+    [10] => Travel support
+    [11] => Travelcosts (if you need support)
+    [12] => Currency
+    [13] => Comments, questions, other needs
+    [14] => Status of proposal
+    [15] => Comments on status
 */
 
 $entry = $talk->get_entry();
@@ -130,17 +154,17 @@ function time_to_minutes($time) {
 }
 
 $day = array (
-    2 => 'Wednesday May 2nd',
-    3 => 'Thursday May 3rd',
-    4 => 'Friday May 4th',
-    5 => 'Saturday May 5th',
+    10 => 'Wednesday April 10th',
+    11 => 'Thursday April 11th',
+    12 => 'Friday April 12th',
+    13 => 'Saturday April 13th',
 );
 
 $schedule = array(
-    2 => array(),
-    3 => array(),
-    4 => array(),
-    5 => array(),
+    10 => array(),
+    11 => array(),
+    12 => array(),
+    13 => array(),
 );
 $unscheduled = array();
 // debug('entry', $entry);

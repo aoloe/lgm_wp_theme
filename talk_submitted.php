@@ -61,18 +61,22 @@ foreach ($entry as $item) {
     sprintf(
         '[ <a href="mailto:%s?subject=%s&body=%s">confirm</a> ]',
         $item['email'],
-        'Talk LGM 2012: '.str_replace('"', '', substr($item['title'], 0, 50)), 
+        'Talk LGM 2013: '.str_replace('"', '', substr($item['title'], 0, 50)), 
         sprintf(
 "Dear %s,%%0D%%0A
 %%0D%%0A
-We are happy to confirm that your  talk proposal has been accepted and will be part of the LGM 2012 schedule. We are finalizing the schedule at present time and it will be online on Sunday April 1.  Please make sure to contact us asap if you encounter any change in your trip.%%0D%%0A
+We are happy to confirm that your talk proposal has been accepted and will be part of the LGM 2013 program. The meeting takes place from 10-13 April in Madrid, Spain.%%0D%%0A
 %%0D%%0A
-We look forward to a great LGM !%%0D%%0A
+Right now we are finalizing the schedule, which will be online by Sunday April 1.%%0D%%0A
 %%0D%%0A
-Have a nice day,%%0D%%0A
+If you asked for support from LGM, take into account that reimbursements happen only after LGM, and cover travel costs (economy class, no accommodation etc.). For more information, see here: http://libregraphicsmeeting.org/2013/reimbursements .%%0D%%0A
 %%0D%%0A
-Ale Rimoldi%%0D%%0A
-for the LGM team",
+Please contact us as soon as possible if anything changes in your trip.%%0D%%0A
+%%0D%%0A
+We look forward to your contribution and to a great LGM!.%%0D%%0A
+%%0D%%0A
+For the LGM team,%%0D%%0A
+Femke Snelting",
             $item['firstname']
         )
     ).
