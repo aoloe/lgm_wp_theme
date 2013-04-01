@@ -14,6 +14,25 @@ wp_register_script('jquery-ui', ("http://ajax.googleapis.com/ajax/libs/jqueryui/
 wp_enqueue_script('jquery-ui');
 */
 
+debug('_REQUEST', $_REQUEST);
+
+if (array_key_exists('lang', $_REQUEST) && ($_REQUEST['lang'] == 'es')) {
+    get_header();
+    get_sidebar();
+    if (have_posts()) {
+        while (have_posts()) {
+            the_post();
+            the_content();
+        }
+    }
+    $post = get_page_by_path('programa');
+    $content = apply_filters('the_content', $post->post_content);
+    echo $content;
+
+    get_footer();
+    exit();
+}
+
 include('Talk.php');
 $talk = new lgm_Talk();
 ?>
@@ -111,9 +130,10 @@ $(document).ready(function(){
 $entry = $talk->get_entry();
 // debug('entry', $entry);
 
+// the grid size must be adapted depending on the start and end hours (9:00-24:00)
 $grid = array();
-for ($i = 0; $i < 4; $i++) {
-    for ($j = 0; $j < 120; $j++) { // 12 slots per hour on 10 hours
+for ($i = 10; $i < 14; $i++) {
+    for ($j = 0; $j < 180; $j++) { // 12 slots per hour on 15 hours
         for ($k = 0; $k < 6; $k++) { // max 6 things in parallel
             $grid[$i][$j][$k] = 0;
         }
@@ -130,7 +150,7 @@ function time_to_column($day, $time, $duration) {
     while (!$placed) {
         $free = true;
         for ($i = $slot; $i < $end; $i++) {
-            $free = $free && ($grid[$day - 2][$i][$result] == 0);
+            $free = $free && ($grid[$day][$i][$result] == 0);
         }
         if ($free) {
             $placed = true;
@@ -139,7 +159,7 @@ function time_to_column($day, $time, $duration) {
         }
     }
     for ($i = $slot; $i < $end; $i++) {
-        $grid[$day - 2][$i][$result] = 1; // we could put the talk id...
+        $grid[$day][$i][$result] = 1; // we could put the talk id...
     }
     return $result;
 } // time_to_column()
@@ -158,24 +178,26 @@ $day = array (
     11 => 'Thursday April 11th',
     12 => 'Friday April 12th',
     13 => 'Saturday April 13th',
+    14 => 'Sunday April 14th',
 );
 
 $schedule = array(
     10 => array(),
     11 => array(),
     12 => array(),
-    13 => array(),
+    14 => array(),
 );
 $unscheduled = array();
 // debug('entry', $entry);
 foreach ($entry as $key => $value) {
+    // debug('url', $value['url']);
     if (!empty($value['day']) && !empty($value['time'])) {
         $minute = time_to_minutes($value['time']);
         $schedule[$value['day']][$minute][] = array (
             'id' => $key,
             'title' => $value['title'],
             'talker' => $value['firstname'].' '.$value['lastname'].(empty($value['speakers']) ? '' : ', '.$value['speakers']),
-            'type' => $value['type'],
+            'url' => $value['url'],
             'summary' => $value['summary'],
             'remarks' => $value['remarks'],
             'time' => $value['time'],
@@ -183,6 +205,7 @@ foreach ($entry as $key => $value) {
             'time_column' => time_to_column($value['day'], $value['time'], $value['duration']),
             'duration' => $value['duration'],
             'slide' => $value['slide'],
+            'type' => $value['type'],
         );
         // debug('value', $value);
     } elseif ($value['status'] != 'Cancelled') {
@@ -258,7 +281,7 @@ foreach ($schedule as $key => $value) {
                 ''
             ).
             '<br />'.
-            '<em>'.$item['talker'].'</em>'.
+            '<em>'.$item['talker'].($item['url'] == '' ? '' : '<br /><a href="http://'.$item['url'].'">'.$item['url'].'</a>').'</em>'.
             // $item['remarks'].
             (
                 $item['slide'] ?
