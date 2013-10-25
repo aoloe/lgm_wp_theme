@@ -132,7 +132,7 @@ $entry = $talk->get_entry();
 
 // the grid size must be adapted depending on the start and end hours (9:00-24:00)
 $grid = array();
-for ($i = 10; $i < 14; $i++) {
+for ($i = 10; $i < 15; $i++) {
     for ($j = 0; $j < 180; $j++) { // 12 slots per hour on 15 hours
         for ($k = 0; $k < 6; $k++) { // max 6 things in parallel
             $grid[$i][$j][$k] = 0;
@@ -185,6 +185,7 @@ $schedule = array(
     10 => array(),
     11 => array(),
     12 => array(),
+    13 => array(),
     14 => array(),
 );
 $unscheduled = array();
